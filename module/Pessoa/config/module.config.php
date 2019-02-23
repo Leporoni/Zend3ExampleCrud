@@ -19,6 +19,12 @@ return [
                     ],
                 ],
             ],
-        ]
-    ]
+        ],
+    ],
+    'view_manager' => [
+        'tamplate_path_stack' => [
+            'pessoa' => __DIR__ . '/../view',
+        ],
+    ],
 ];
+
