@@ -2,6 +2,9 @@
 
 namespace Pessoa;
 
+use Zend\ServiceManager\Factory\InvokableFactory;
+
+
 return [
     'router' => [
         'routes' => [
@@ -21,10 +24,22 @@ return [
             ],
         ],
     ],
+    'controllers' => [
+        'factories' => [
+            //Controller\PessoaController::class => InvokableFactory::class,
+        ],  
+    ],
     'view_manager' => [
-        'tamplate_path_stack' => [
+        'template_path_stack' => [
             'pessoa' => __DIR__ . '/../view',
         ],
+    ],
+    'db' => [
+        'driver' => 'Pdo_Mysql',
+        'database' => 'crud_zend',
+        'username' => 'root',
+        'password' => 'masterkey',
+        'hostname' => 'localhost'
     ],
 ];
 
